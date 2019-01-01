@@ -17,6 +17,24 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n, row = 1, stair = '') {
+  if (n === 0) {
+    return;
+  }
+
+  if (n === stair.length) {
+    console.log(stair);
+    return steps(n, row + 1);
+  }
+}
 
 module.exports = steps;
+
+
+// function steps(n) {
+//   for (let i = 1; i <= n; i++) {
+//     let pounds = "#".repeat(i);
+//     let spaces = " ".repeat(n - i);
+//     console.log(pounds + spaces);
+//   }
+// }
